@@ -1,11 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Agro & Forte | Sustentabilidade</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Agro<span>Forte</span></h1>
+            </div>
+            <nav>
+                <a href="#inicio">Início</a>
+                <a href="#pilares">Compromisso</a>
+                <a href="#simulador">Simulador</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h2>O Futuro Alimenta o Presente</h2>
+            <p>Produzir com excelência, proteger com consciência. Conheça o equilíbrio perfeito entre a força do campo e o respeito ao meio ambiente.</p>
+            <button class="btn" onclick="scrollToSimulador()">Fazer Minha Parte</button>
+        </div>
+    </section>
+
+    <section class="pilares" id="pilares">
+        <h3>Nosso Compromisso com a Terra</h3>
+        <div class="grid-pilares">
+            <div class="card">
+                <h4>Produtividade Eficiente</h4>
+                <p>Uso de tecnologias de precisão para produzir mais alimentos por hectare, reduzindo o desperdício de recursos preciosos.</p>
+            </div>
+            <div class="card">
+                <h4>Preservação Ativa</h4>
+                <p>Manutenção de áreas de reserva legal e proteção de nascentes, integrando florestas nativas e lavouras produtivas.</p>
+            </div>
+            <div class="card">
+                <h4>Energia Limpa</h4>
+                <p>Uso de biomassa, energia solar e biocombustíveis nas operações, reduzindo drasticamente a pegada de carbono do setor.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="interativo" id="simulador">
+        <h3>Simulador de Práticas Sustentáveis</h3>
+        <p>Escolha uma ação para ver o impacto positivo que ela gera no ecossistema.</p>
+        
+        <div class="form-container">
+            <div class="form-group">
+                <label for="pratica">Selecione uma prática agrícola:</label>
+                <select id="pratica" onchange="calcularImpacto()">
+                    <option value="">-- Escolha uma opção --</option>
+                    <option value="direto">Plantio Direto na Palha</option>
+                    <option value="gotejamento">Irrigação por Gotejamento</option>
+                    <option value="rotacao">Rotação de Culturas</option>
+                </select>
+            </div>
+            <div id="resultado">Selecione uma prática acima para ver o resultado.</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 AgroForte Sustentável. Produzindo equilíbrio para as próximas gerações.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

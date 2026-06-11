@@ -1,0 +1,208 @@
+/* --- Configurações Globais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --verde-escuro: #1b4332;
+    --verde-principal: #2d6a4f;
+    --verde-claro: #d8f3dc;
+    --laranja-terra: #b7094c;
+    --cinza-claro: #f8f9fa;
+    --texto-escuro: #212529;
+}
+
+body {
+    background-color: var(--cinza-claro);
+    color: var(--texto-escuro);
+    line-height: 1.6;
+}
+
+/* --- Cabeçalho (Header) --- */
+header {
+    background-color: var(--verde-escuro);
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #52b788;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #52b788;
+}
+
+/* --- Banner Principal (Hero) --- */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    margin-top: 70px;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+.btn {
+    background-color: #52b788;
+    color: var(--verde-escuro);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #74c69d;
+    transform: translateY(-2px);
+}
+
+/* --- Seção de Pilares --- */
+.pilares {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.pilares h3 {
+    font-size: 2rem;
+    color: var(--verde-escuro);
+    margin-bottom: 40px;
+}
+
+.grid-pilares {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    transition: transform 0.3s;
+    border-top: 5px solid var(--verde-principal);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h4 {
+    color: var(--verde-principal);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+/* --- Seção Interativa --- */
+.interativo {
+    background-color: var(--verde-claro);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 30px auto 0;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-weight: bold;
+    color: var(--verde-escuro);
+    font-size: 1.1rem;
+}
+
+/* --- Rodapé --- */
+footer {
+    background-color: var(--verde-escuro);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    .hero-content h2 { font-size: 2rem; }
+    nav { display: none; }
+}
